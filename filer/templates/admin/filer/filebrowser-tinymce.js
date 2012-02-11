@@ -1,5 +1,6 @@
 function djangoFileBrowser(field_name, url, type, win) {
     //type = "file_ptr";
+    console.log(type);
     var url = "{{ filer_url }}?pop=1&tinymce=1&type=" + type;
 
     tinyMCE.activeEditor.windowManager.open(
