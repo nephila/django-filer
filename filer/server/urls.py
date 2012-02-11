@@ -8,5 +8,8 @@ urlpatterns = patterns('filer.server.views',
 
     url(r'^' + filer_settings.FILER_PRIVATEMEDIA_THUMBNAIL_STORAGE.base_url.lstrip('/') + r'(?P<path>.*)$',
         'serve_protected_thumbnail',),
+
+    url(r'^(?P<pk>\w+)/$', 'serve_public_file', name="filer-serve"),
+    url(r'^$', 'serve_public_file', name="filer-serve-unbound"),
 )
 

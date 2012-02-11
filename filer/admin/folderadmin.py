@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 from django import forms
+from django.conf import settings as django_settings
 from django.contrib import admin
 from django.contrib.admin.util import unquote
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
@@ -12,11 +13,12 @@ from django.utils.safestring import mark_safe
 from filer import settings
 from filer.admin.permissions import PrimitivePermissionAwareModelAdmin
 from filer.admin.tools import popup_status, selectfolder_status, \
-    userperms_for_request
+    userperms_for_request, tinymce_status
 from filer.models import Folder, FolderRoot, UnfiledImages, \
     ImagesWithMissingData, File, tools
 from filer.settings import FILER_STATICMEDIA_PREFIX, FILER_PAGINATE_BY
 import urllib
+import os.path
 
 
 class AddFolderPopupForm(forms.ModelForm):
@@ -281,6 +283,9 @@ class FolderAdmin(PrimitivePermissionAwareModelAdmin):
                 'show_result_count': show_result_count,
                 'limit_search_to_folder': limit_search_to_folder,
                 'is_popup': popup_status(request),
+                'tinymce': tinymce_status(request),
+                'tinymce_url': os.path.dirname(django_settings.TINYMCE_JS_URL),
+                'filer_serve':reverse("filer-serve-unbound"),
                 'select_folder': selectfolder_status(request),
                 # needed in the admin/base.html template for logout links
                 'root_path': "/%s" % admin.site.root_path,

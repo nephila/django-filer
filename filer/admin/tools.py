@@ -5,6 +5,10 @@ def popup_status(request):
     return '_popup' in request.REQUEST or 'pop' in request.REQUEST
 
 
+def tinymce_status(request):
+    return '_tinymce' in request.REQUEST or 'tinymce' in request.REQUEST
+
+
 def selectfolder_status(request):
     return 'select_folder' in request.REQUEST
 

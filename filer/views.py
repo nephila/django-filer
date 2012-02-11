@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
+from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from models import Folder, Image, Clipboard, tools
 
@@ -39,6 +40,11 @@ def _userperms(item, request):
             if x:
                 r.append(p)
     return r
+
+def tinymce_filer(request):
+    filer_url = reverse('admin:filer-directory_listing-root')
+    return render_to_response('admin/filer/filebrowser-tinymce.js', {'filer_url': filer_url},
+            context_instance=RequestContext(request))
 
 
 @login_required

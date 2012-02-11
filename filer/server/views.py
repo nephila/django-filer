@@ -10,6 +10,17 @@ from filer.utils.filer_easy_thumbnails import thumbnail_to_original_filename
 server = filer_settings.FILER_PRIVATEMEDIA_SERVER
 thumbnail_server = filer_settings.FILER_PRIVATEMEDIA_THUMBNAIL_SERVER
 
+
+def serve_public_file(request, pk):
+    """
+    Serve public files to all users.
+    """
+    try:
+        thefile = File.objects.get(pk=pk, is_public=True)
+    except File.DoesNotExist:
+        raise Http404('File not found')
+    return server.serve(request, file=thefile.file, save_as=False)
+
 def serve_protected_file(request, path):
     """
     Serve protected files to authenticated users with read permissions.
