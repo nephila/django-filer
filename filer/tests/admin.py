@@ -79,11 +79,11 @@ class FilerClipboardAdminUrlsTests(TestCase):
 
     def test_filer_upload_file(self):
         self.assertEqual(Image.objects.count(), 0)
-        file = DjangoFile(open(self.filename))
+        file_obj = DjangoFile(open(self.filename))
         response = self.client.post(reverse('admin:filer-ajax_upload'),
                                     {
                                        'Filename':self.image_name,
-                                        'Filedata': file,
+                                        'Filedata': file_obj,
                                        'jsessionid':self.client.session.session_key,
                                     })
         self.assertEqual(Image.objects.count(), 1)
@@ -117,8 +117,8 @@ class  BulkOperationsMixin(object):
         self.dst_folder.save()
 
     def create_image(self, folder):
-        file = DjangoFile(open(self.filename), name=self.image_name)
-        self.image_obj = Image.objects.create(owner=self.superuser, original_filename=self.image_name, file=file, folder=folder)
+        file_obj = DjangoFile(open(self.filename), name=self.image_name)
+        self.image_obj = Image.objects.create(owner=self.superuser, original_filename=self.image_name, file=file_obj, folder=folder)
         self.image_obj.save()
 
 class FilerBulkOperationsTests(BulkOperationsMixin, TestCase):

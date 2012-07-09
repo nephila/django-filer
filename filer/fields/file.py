@@ -25,8 +25,8 @@ class AdminFileWidget(ForeignKeyRawIdWidget):
         related_url = None
         if value:
             try:
-                file = File.objects.get(pk=value)
-                related_url = file.logical_folder.\
+                file_obj = File.objects.get(pk=value)
+                related_url = file_obj.logical_folder.\
                                 get_admin_directory_listing_url_path()
             except Exception:
                 pass
