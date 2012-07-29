@@ -1143,8 +1143,14 @@ qq.UploadHandlerXhr = function(o){
 // static method
 qq.UploadHandlerXhr.isSupported = function(){
     var input = document.createElement('input');
-    input.type = 'file';        
-    
+    input.type = 'file';
+    tof = typeof File;
+    minput = 'multiple' in input;
+    xhr = new XMLHttpRequest();
+
+    console.log("Type of File "+tof);
+    console.log("multiple input "+minput);
+    console.log("xhr upload"+xhr.upload);
     return (
         'multiple' in input &&
         typeof File != "undefined" &&

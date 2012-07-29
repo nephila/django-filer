@@ -6,6 +6,7 @@
 $(function() {
     var uploader = new qq.FileUploaderBasic({
         action: '{% url 'admin:filer-ajax_upload' %}',
+        debug: true,
         button: document.getElementById('id_upload_button'),
         onSubmit: function(id, fileName){
             $("#fileInputQueue .noItemsRow").hide();
