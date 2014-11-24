@@ -1,6 +1,5 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from datetime import datetime
-import logging
 try:
     from PIL import Image as PILImage
 except ImportError:
@@ -17,8 +16,6 @@ from django.utils.translation import ugettext_lazy as _
 from filer import settings as filer_settings
 from filer.models.abstract import BaseImage
 from filer.utils.loader import load_object
-
-logger = logging.getLogger("filer")
 
 
 if not filer_settings.FILER_IMAGE_MODEL:
@@ -54,6 +51,12 @@ if not filer_settings.FILER_IMAGE_MODEL:
             if self.date_taken is None:
                 self.date_taken = now()
             super(Image, self).save(*args, **kwargs)
+
+        class Meta:
+            app_label = 'filer'
+            verbose_name = _('image')
+            verbose_name_plural = _('images')
+            abstract = False
 else:
     # This is just an alias for the real model defined elsewhere
     # to let imports works transparently

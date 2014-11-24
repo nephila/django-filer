@@ -1,4 +1,5 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+import logging
 import os
 try:
     from PIL import Image as PILImage
@@ -16,6 +17,8 @@ from filer import settings as filer_settings
 from filer.models.filemodels import File
 from filer.utils.filer_easy_thumbnails import FilerThumbnailer
 from filer.utils.pil_exif import get_exif_for_file
+
+logger = logging.getLogger("filer")
 
 
 class BaseImage(File):
