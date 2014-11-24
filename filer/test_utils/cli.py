@@ -56,6 +56,7 @@ def configure(**extra):
             'easy_thumbnails',
             'mptt',
             'filer',
+            'filer.test_utils.extended_models',
             ],
         ROOT_URLCONF='filer.test_utils.cli',
     )
@@ -68,6 +69,8 @@ def configure(**extra):
     else:
         extra['MIGRATION_MODULES'] = {
             'filer': 'filer.migrations_django',
+            'custom_image': 'filer.test_utils.custom_image.migrations_django',
+            'extended_models': 'filer.test_utils.extended_models.migrations_django',
         }
     if extra.get('FILER_IMAGE_MODEL', False):
         defaults['INSTALLED_APPS'].append('filer.test_utils.custom_image')

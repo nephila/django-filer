@@ -13,6 +13,7 @@ from filer.models.filemodels import File
 from filer.models.clipboardmodels import Clipboard
 from filer.test_utils.cli import ET_2
 from filer.test_utils.compat import skipIf, skipUnless
+from filer.test_utils.extended_models.models import AttachmentImage
 from filer.tests.helpers import (create_superuser, create_folder_structure,
                                  create_image, create_clipboard_item)
 from filer import settings as filer_settings
@@ -223,3 +224,10 @@ class FilerApiTests(TestCase):
 
             reloaded = Image.objects.get(pk=image.pk)
             self.assertEqual(reloaded.author, image.author)
+
+    def test_extended_model(self):
+        file_obj = DjangoFile(open(self.filename, 'rb'), name=self.image_name)
+        image = AttachmentImage.objects.create(owner=self.superuser,
+                                               original_filename=self.image_name,
+                                               file=file_obj)
+        self.assertTrue(hasattr(image, 'attachment_description'))
