@@ -1,6 +1,12 @@
 Changelog for django-filer
 ==========================
 
+0.9.9 (2014-12-24)
+------------------
+
+* Hotfix release for PEP 440 dependencies enforced by pip 6.0
+
+
 0.9.8 (2014-11-03)
 ------------------
 
