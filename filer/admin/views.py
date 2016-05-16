@@ -12,7 +12,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.csrf import csrf_exempt
 
 from PIL import ImageOps, Image as PILImage
-from filer.models import Image
+from filer.models import File
 
 from .. import settings as filer_settings
 from ..models import Clipboard, Folder, FolderRoot, tools
@@ -133,7 +133,7 @@ def delete_clipboard(request):
     )
 
 def _get_images(pk):
-    filer_image = Image.objects.get(pk=pk)
+    filer_image = File.objects.get(pk=pk)
     im = PILImage.open(filer_image.path)
     return (filer_image, im)
 
@@ -142,7 +142,7 @@ def op_rotate_right(pk, degree):
     (filer_image, im) = _get_images(pk)
     im = im.rotate(-degree)
     im.save(filer_image.path)
-    im_filer = Image.objects.get(pk=pk)
+    im_filer = File.objects.get(pk=pk)
     im_filer.file.delete_thumbnails()
     return im_filer
 
@@ -151,7 +151,7 @@ def op_rotate_left(pk, degree):
     (filer_image, im) = _get_images(pk)
     im = im.rotate(degree)
     im.save(filer_image.path)
-    im_filer = Image.objects.get(pk=pk)
+    im_filer = File.objects.get(pk=pk)
     im_filer.file.delete_thumbnails()
     return im_filer
 
@@ -160,7 +160,7 @@ def op_flip_v(pk):
     (filer_image, im) = _get_images(pk)
     im = ImageOps.flip(im)
     im.save(filer_image.path)
-    im_filer = Image.objects.get(pk=pk)
+    im_filer = File.objects.get(pk=pk)
     im_filer.file.delete_thumbnails()
     return im_filer
 
@@ -169,7 +169,7 @@ def op_flip_h(pk):
     (filer_image, im) = _get_images(pk)
     im = ImageOps.mirror(im)
     im.save(filer_image.path)
-    im_filer = Image.objects.get(pk=pk)
+    im_filer = File.objects.get(pk=pk)
     im_filer.file.delete_thumbnails()
     return im_filer
 
