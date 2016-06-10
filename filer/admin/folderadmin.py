@@ -5,6 +5,7 @@ from __future__ import absolute_import, division, unicode_literals
 import itertools
 import os
 import re
+from operator import attrgetter
 
 from django import forms
 from django.conf import settings as django_settings
@@ -83,6 +84,7 @@ class FolderAdmin(PrimitivePermissionAwareModelAdmin):
     directory_listing_template = 'admin/filer/folder/directory_listing.html'
     order_by_file_fields = ('_file_size', 'original_filename', 'name', 'owner',
                             'uploaded_at', 'modified_at')
+    order_by_attribute = None
 
     def get_form(self, request, obj=None, **kwargs):
         """
@@ -362,6 +364,8 @@ class FolderAdmin(PrimitivePermissionAwareModelAdmin):
         if order_by is None or len(order_by) == 0:
             folder_files.sort()
 
+        if self.order_by_attribute:
+            folder_files = sorted(list(folder_files), key=attrgetter(self.order_by_attribute), reverse=True)
         items = folder_children + folder_files
         items_permissions = [(item, {'change': self.has_change_permission(request, item)}) for item in items]
         paginator = Paginator(items_permissions, FILER_PAGINATE_BY)
