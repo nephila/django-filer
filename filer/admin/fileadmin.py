@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 
 from .. import settings
 from ..models import File
-from ..utils.compatibility import LTE_DJANGO_1_5, LTE_DJANGO_1_6, unquote
+from ..utils.compatibility import LTE_DJANGO_1_5, LTE_DJANGO_1_6, LTE_DJANGO_1_8, unquote
 from .permissions import PrimitivePermissionAwareModelAdmin
 from .tools import AdminContext, admin_url_params_encoded, popup_status
 
@@ -97,6 +97,7 @@ class FileAdmin(PrimitivePermissionAwareModelAdmin):
     def render_change_form(self, request, context, add=False, change=False,
                            form_url='', obj=None):
         extra_context = {'show_delete': True,
+                         'DJANGO_1_9': not LTE_DJANGO_1_8,
                          'is_popup': popup_status(request),
                          'filer_admin_context': AdminContext(request)}
         context.update(extra_context)
