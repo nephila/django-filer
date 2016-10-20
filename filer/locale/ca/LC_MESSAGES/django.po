@@ -5,14 +5,14 @@
 # Translators:
 # Translators:
 # Translators:
-# Roger Pons <rogerpons@gmail.com>, 2013-2014
+# Roger Pons <rogerpons@gmail.com>, 2013-2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django Filer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-30 20:28-0400\n"
-"PO-Revision-Date: 2016-08-31 00:29+0000\n"
-"Last-Translator: Paulo Alvarado <paulo.alvarado@divio.ch>\n"
+"PO-Revision-Date: 2016-09-10 11:27+0000\n"
+"Last-Translator: Roger Pons <rogerpons@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/divio/django-filer/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Avançat"
 
 #: admin/fileadmin.py:163
 msgid "canonical URL"
-msgstr ""
+msgstr "URL canònica"
 
 #: admin/folderadmin.py:387 admin/folderadmin.py:554
 msgid ""
@@ -101,7 +101,7 @@ msgstr "Esborrar els fitxers i/o carpetes seleccionats"
 #: admin/folderadmin.py:906
 #, python-format
 msgid "Folders with names %s already exist at the selected destination"
-msgstr ""
+msgstr "Ja existeixen carpetes amb els noms %s a la destinació seleccionada"
 
 #: admin/folderadmin.py:910
 #, python-format
@@ -211,20 +211,20 @@ msgstr "Lloc del subjecte."
 
 #: admin/imageadmin.py:17
 msgid "Location of the main subject of the scene. Format: \"x,y\"."
-msgstr ""
+msgstr "Ubicació del subjecte principal de l'escena. Format: \"x,y\"."
 
 #: admin/imageadmin.py:54
 msgid "Invalid subject location format. "
-msgstr ""
+msgstr "Foirmat erroni de la ubicació del subjecte."
 
 #: admin/imageadmin.py:60
 msgid "Subject location is outside of the image. "
-msgstr ""
+msgstr "La ubicació del subjecte està fora de la imatge."
 
 #: admin/imageadmin.py:69
 #, python-brace-format
 msgid "Your input: \"{subject_location}\". "
-msgstr ""
+msgstr "La teva entrada: \"{subject_location}\"."
 
 #: admin/views.py:57
 msgid "Folder with this name already exists."
@@ -238,7 +238,7 @@ msgstr "Filer"
 
 #: contrib/django_cms/cms_toolbars.py:47
 msgid "Media library"
-msgstr ""
+msgstr "Biblioteca de medis."
 
 #: models/abstract.py:40
 msgid "default alt text"
@@ -341,7 +341,7 @@ msgstr "Permisos desactivats"
 msgid ""
 "Disable any permission checking for this file. File will be publicly "
 "accessible to anyone."
-msgstr ""
+msgstr "Desactiveu tots els permisos d'aquest fitxer. Aquest serà accessible de forma pública per a tothom."
 
 #: models/foldermodels.py:112
 msgid "created at"
@@ -371,11 +371,11 @@ msgstr "aquest elements i els seus fills"
 
 #: models/foldermodels.py:261
 msgid "allow"
-msgstr ""
+msgstr "permetre"
 
 #: models/foldermodels.py:262
 msgid "deny"
-msgstr ""
+msgstr "denegar"
 
 #: models/foldermodels.py:267
 msgid "type"
@@ -427,22 +427,22 @@ msgstr "cal publicar sempre els drets d'autor"
 
 #: models/thumbnailoptionmodels.py:15
 msgid "width in pixel."
-msgstr ""
+msgstr "ample en píxels."
 
 #: models/thumbnailoptionmodels.py:16
 msgid "height in pixel."
-msgstr ""
+msgstr "alt en píxels"
 
 #: models/thumbnailoptionmodels.py:24
 msgid "thumbnail options"
-msgstr ""
+msgstr "opcions de miniatura"
 
 #: models/virtualitems.py:50
 #: templates/admin/filer/folder/directory_table.html:4
 #: templates/admin/filer/folder/directory_table.html:152
 #: templates/admin/filer/tools/clipboard/clipboard.html:27
 msgid "Unsorted Uploads"
-msgstr ""
+msgstr "Pujades sense ordre"
 
 #: models/virtualitems.py:65
 msgid "files with missing metadata"
@@ -510,7 +510,7 @@ msgstr "Tornar a la carpeta '%(folder_name)s'"
 
 #: templates/admin/filer/change_form.html:25
 msgid "Duplicates"
-msgstr ""
+msgstr "Duplicats"
 
 #: templates/admin/filer/delete_selected_files_confirmation.html:11
 msgid ""
@@ -535,11 +535,11 @@ msgstr "Segur que voleu esborrar els fitxers i/o carpetes seleccionades? Els seg
 #: templates/admin/filer/folder/choose_copy_destination.html:77
 #: templates/admin/filer/folder/choose_move_destination.html:73
 msgid "No, take me back"
-msgstr ""
+msgstr "No, porta'm enrere."
 
 #: templates/admin/filer/delete_selected_files_confirmation.html:47
 msgid "Yes, I&#39;m sure"
-msgstr ""
+msgstr "Sí, estic segur"
 
 #: templates/admin/filer/file/change_form.html:36
 #: templates/admin/filer/folder/change_form.html:21
@@ -586,7 +586,7 @@ msgstr "Sense permisos per copiar tots els fitxers i/o carpetes seleccionats."
 #: templates/admin/filer/folder/choose_move_destination.html:44
 #: templates/admin/filer/folder/choose_move_destination.html:50
 msgid "Take me back"
-msgstr ""
+msgstr "Porta'm enrere"
 
 #: templates/admin/filer/folder/choose_copy_destination.html:42
 #: templates/admin/filer/folder/choose_move_destination.html:42
@@ -616,7 +616,7 @@ msgstr "Copiar"
 
 #: templates/admin/filer/folder/choose_copy_destination.html:80
 msgid "It is not allowed to copy files into same folder"
-msgstr ""
+msgstr "No està permès copiar fitxers a la mateixa carpeta"
 
 #: templates/admin/filer/folder/choose_images_resize_options.html:15
 msgid ""
@@ -673,7 +673,7 @@ msgstr "Moure"
 
 #: templates/admin/filer/folder/choose_move_destination.html:76
 msgid "It is not allowed to move files into same folder"
-msgstr ""
+msgstr "No està permès moure fitxers a la mateixa carpeta"
 
 #: templates/admin/filer/folder/choose_rename_format.html:15
 msgid ""
@@ -708,7 +708,7 @@ msgstr "Modificar"
 
 #: templates/admin/filer/folder/directory_listing.html:155
 msgid "Click here to run search for entered phrase"
-msgstr ""
+msgstr "Cliqueu aquí per cercar la frase introduïda"
 
 #: templates/admin/filer/folder/directory_listing.html:158
 msgid "Search"
@@ -716,19 +716,19 @@ msgstr "Cercar"
 
 #: templates/admin/filer/folder/directory_listing.html:165
 msgid "Close"
-msgstr ""
+msgstr "Tancar"
 
 #: templates/admin/filer/folder/directory_listing.html:167
 msgid "Limit"
-msgstr ""
+msgstr "Limitar"
 
 #: templates/admin/filer/folder/directory_listing.html:172
 msgid "Check it to limit the search to current folder"
-msgstr ""
+msgstr "Marqueu per limitar la cercar a la carpeta actual"
 
 #: templates/admin/filer/folder/directory_listing.html:173
 msgid "Limit the search to current folder"
-msgstr ""
+msgstr "Limitar la cerca a la carpeta actual"
 
 #: templates/admin/filer/folder/directory_listing.html:189
 #: templates/admin/filer/tools/detail_info.html:215
@@ -749,11 +749,11 @@ msgstr "Carpeta nova"
 #: templates/admin/filer/folder/directory_listing.html:231
 #: templates/admin/filer/folder/directory_listing.html:238
 msgid "Upload Files"
-msgstr ""
+msgstr "Pujar Arxius"
 
 #: templates/admin/filer/folder/directory_listing.html:236
 msgid "You have to select a folder first"
-msgstr ""
+msgstr "Cal que abans seleccioneu una carpeta"
 
 #: templates/admin/filer/folder/directory_table.html:13
 msgid "Name"
@@ -769,11 +769,11 @@ msgstr "Propietari"
 #: templates/admin/filer/tools/detail_info.html:40
 #: templates/admin/filer/tools/detail_info.html:104
 msgid "Size"
-msgstr ""
+msgstr "Mida"
 
 #: templates/admin/filer/folder/directory_table.html:16
 msgid "Action"
-msgstr ""
+msgstr "Acció"
 
 #: templates/admin/filer/folder/directory_table.html:25
 #: templates/admin/filer/folder/directory_table.html:32
@@ -788,24 +788,24 @@ msgstr "Modificar els detalls de la carpeta '%(item_label)s'"
 #, python-format
 msgid "%(counter)s folder"
 msgid_plural "%(counter)s folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s fitxer"
+msgstr[1] "%(counter)s fitxers"
 
 #: templates/admin/filer/folder/directory_table.html:74
 #: templates/admin/filer/tools/search_form.html:6
 #, python-format
 msgid "%(counter)s file"
 msgid_plural "%(counter)s files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s fitxer"
+msgstr[1] "%(counter)s fitxers"
 
 #: templates/admin/filer/folder/directory_table.html:80
 msgid "Change folder details"
-msgstr ""
+msgstr "Modifcar detalls de carpeta"
 
 #: templates/admin/filer/folder/directory_table.html:81
 msgid "Remove folder"
-msgstr ""
+msgstr "Esborrar carpeta"
 
 #: templates/admin/filer/folder/directory_table.html:92
 #: templates/admin/filer/folder/directory_table.html:100
@@ -834,15 +834,15 @@ msgstr "activat"
 
 #: templates/admin/filer/folder/directory_table.html:139
 msgid "Remove file"
-msgstr ""
+msgstr "Esborrar fitxer"
 
 #: templates/admin/filer/folder/directory_table.html:146
 msgid "Drop files here or use the \"Upload Files\" button"
-msgstr ""
+msgstr "Deixeu anar fitxers aquí o utilitzeu el botó \"Pujar Fitxers\""
 
 #: templates/admin/filer/folder/directory_table.html:156
 msgid "Drop your file to upload into:"
-msgstr ""
+msgstr "Deixeu anar el fitxer a pujar a:"
 
 #: templates/admin/filer/folder/directory_table.html:166
 msgid "Upload"
@@ -850,15 +850,15 @@ msgstr "Pujar"
 
 #: templates/admin/filer/folder/directory_table.html:178
 msgid "cancel"
-msgstr ""
+msgstr "cancel·lar"
 
 #: templates/admin/filer/folder/directory_table.html:182
 msgid "Upload success!"
-msgstr ""
+msgstr "Pujada correcta!"
 
 #: templates/admin/filer/folder/directory_table.html:186
 msgid "Upload canceled!"
-msgstr ""
+msgstr "Pujada cancel·lada!"
 
 #: templates/admin/filer/folder/directory_table.html:193
 msgid "previous"
@@ -867,7 +867,7 @@ msgstr "anterior"
 #: templates/admin/filer/folder/directory_table.html:198
 #, python-format
 msgid "Page %(number)s of %(num_pages)s."
-msgstr ""
+msgstr "Pàgina %(number)s de %(num_pages)s."
 
 #: templates/admin/filer/folder/directory_table.html:203
 msgid "next"
@@ -876,7 +876,7 @@ msgstr "següent"
 #: templates/admin/filer/folder/directory_table.html:213
 #, python-format
 msgid "Select all %(total_count)s"
-msgstr ""
+msgstr "Seleccionar tots/es %(total_count)s"
 
 #: templates/admin/filer/folder/new_folder_form.html:5
 msgid "Add new"
@@ -906,7 +906,7 @@ msgstr "Moure tots els fitxer del portapapers a"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:27
 msgid "Empty Clipboard"
-msgstr ""
+msgstr "Buidar Porta-retalls"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:50
 msgid "the clipboard is empty"
@@ -918,7 +918,7 @@ msgstr "ha fallat la pujada"
 
 #: templates/admin/filer/tools/detail_info.html:24
 msgid "Open file"
-msgstr ""
+msgstr "Obrir fitxer"
 
 #: templates/admin/filer/tools/detail_info.html:26
 #: templates/admin/filer/tools/detail_info.html:88
@@ -928,46 +928,46 @@ msgstr "Vista prèvia en tamany complet"
 #: templates/admin/filer/tools/detail_info.html:36
 #: templates/admin/filer/tools/detail_info.html:95
 msgid "Type"
-msgstr ""
+msgstr "Tipus"
 
 #: templates/admin/filer/tools/detail_info.html:44
 #: templates/admin/filer/tools/detail_info.html:113
 msgid "File-size"
-msgstr ""
+msgstr "MIda de fitxer"
 
 #: templates/admin/filer/tools/detail_info.html:48
 #: templates/admin/filer/tools/detail_info.html:122
 msgid "Modified"
-msgstr ""
+msgstr "Modificat"
 
 #: templates/admin/filer/tools/detail_info.html:52
 #: templates/admin/filer/tools/detail_info.html:131
 msgid "Created"
-msgstr ""
+msgstr "Creat"
 
 #: templates/admin/filer/tools/detail_info.html:160
 msgid "Add Description"
-msgstr ""
+msgstr "Afegir Descripció"
 
 #: templates/admin/filer/tools/detail_info.html:178
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: templates/admin/filer/tools/detail_info.html:185
 msgid "Add Alt-Text"
-msgstr ""
+msgstr "Afegir Text Alternatiu"
 
 #: templates/admin/filer/tools/detail_info.html:192
 msgid "Add caption"
-msgstr ""
+msgstr "Afegir llegenda"
 
 #: templates/admin/filer/tools/detail_info.html:199
 msgid "Add Tags"
-msgstr ""
+msgstr "Afegir Etiquetes"
 
 #: templates/admin/filer/tools/detail_info.html:206
 msgid "Change File"
-msgstr ""
+msgstr "Modificar Fitxer"
 
 #: templates/admin/filer/tools/search_form.html:5
 msgid "found"
@@ -989,7 +989,7 @@ msgstr "Netejar"
 
 #: templates/admin/filer/widgets/admin_file.html:17
 msgid "or drop your file here"
-msgstr ""
+msgstr "o deixar anar aquí el fitxer"
 
 #: templates/admin/filer/widgets/admin_file.html:26
 #: templates/admin/filer/widgets/admin_file.html:27
@@ -1007,7 +1007,7 @@ msgstr "Cercar"
 
 #: templates/admin/filer/widgets/admin_file.html:36
 msgid "Choose File"
-msgstr ""
+msgstr "Escollir Fitxer"
 
 #: templates/admin/filer/widgets/admin_folder.html:11
 #: templates/admin/filer/widgets/admin_folder.html:33
@@ -1016,7 +1016,7 @@ msgstr "cap seleccionat"
 
 #: templates/admin/filer/widgets/admin_folder.html:15
 msgid "Add Folder"
-msgstr ""
+msgstr "Afegir Carpeta"
 
 #~ msgid ""
 #~ "\n"

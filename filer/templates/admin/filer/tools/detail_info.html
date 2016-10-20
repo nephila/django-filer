@@ -1,4 +1,24 @@
 {% load i18n staticfiles %}
+<script type="text/javascript">
+
+    function execute_op(operation) {
+        var url = '';
+        if (operation == 'rotate-left') {
+            url = "{% url 'admin:rotate-left' original.pk %}";
+        } else if (operation == 'rotate-right') {
+            url = "{% url 'admin:rotate-right' original.pk %}";
+        } else if (operation == 'flip-h') {
+            url = "{% url 'admin:flip-h' original.pk %}";
+        } else if (operation == 'flip-v') {
+            url = "{% url 'admin:flip-v' original.pk %}";
+        }
+        django.jQuery.post(url)
+          .done(function( data ) {
+            django.jQuery('.js-focal-point-image').attr('src', data + '?' + Date.now());
+          });
+    }
+
+</script>
 {% if detail %}
     <section class="image-info image-info-detail">
         {% if original.original_filename %}
@@ -27,6 +47,12 @@
                         {% endif %}
                     </a>
                 </div>
+                {% if not file %}
+                    <button onclick="execute_op('rotate-left')">{% trans "Rotate Left" %}</button>
+                    <button onclick="execute_op('rotate-right')">{% trans "Rotate Right" %}</button>
+                    <button onclick="execute_op('flip-h')">{% trans "Flip Horizontally" %}</button>
+                    <button onclick="execute_op('flip-v')">{% trans "Flip Vertically" %}</button>
+                {% endif %}
             </div>
         </div>
         <div class="image-details-right">

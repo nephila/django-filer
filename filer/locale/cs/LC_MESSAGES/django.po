@@ -5,13 +5,14 @@
 # Translators:
 # Translators:
 # Translators:
+# Mirek Simek <miroslav.simek@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django Filer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-30 20:28-0400\n"
-"PO-Revision-Date: 2016-08-31 00:28+0000\n"
-"Last-Translator: Paulo Alvarado <paulo.alvarado@divio.ch>\n"
+"PO-Revision-Date: 2016-09-09 10:16+0000\n"
+"Last-Translator: Mirek Simek <miroslav.simek@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/divio/django-filer/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: admin/fileadmin.py:163
 msgid "canonical URL"
-msgstr ""
+msgstr "Kanonický odkaz"
 
 #: admin/folderadmin.py:387 admin/folderadmin.py:554
 msgid ""
@@ -57,7 +58,7 @@ msgstr ""
 
 #: admin/folderadmin.py:635
 msgid "Move selected files to clipboard"
-msgstr ""
+msgstr "Přesunout vybrané soubory do schránky"
 
 #: admin/folderadmin.py:673
 #, python-format
@@ -84,19 +85,19 @@ msgstr ""
 
 #: admin/folderadmin.py:761
 msgid "Cannot delete files and/or folders"
-msgstr ""
+msgstr "Nemohu smazat soubory a/nebo složky"
 
 #: admin/folderadmin.py:763
 msgid "Are you sure?"
-msgstr ""
+msgstr "Opravdu provést?"
 
 #: admin/folderadmin.py:769
 msgid "Delete files and/or folders"
-msgstr ""
+msgstr "Smazat soubory a/nebo složky"
 
 #: admin/folderadmin.py:791
 msgid "Delete selected files and/or folders"
-msgstr ""
+msgstr "Smazat vybrané soubory a/nebo složky"
 
 #: admin/folderadmin.py:906
 #, python-format
@@ -112,11 +113,11 @@ msgstr ""
 
 #: admin/folderadmin.py:918 admin/folderadmin.py:920
 msgid "Move files and/or folders"
-msgstr ""
+msgstr "Přesunout soubory a/nebo složky"
 
 #: admin/folderadmin.py:935
 msgid "Move selected files and/or folders"
-msgstr ""
+msgstr "Přesunout vybrané soubory a/nebo složky"
 
 #: admin/folderadmin.py:992
 #, python-format
@@ -126,7 +127,7 @@ msgstr ""
 #: admin/folderadmin.py:1001 admin/folderadmin.py:1003
 #: admin/folderadmin.py:1018
 msgid "Rename files"
-msgstr ""
+msgstr "Přejmenovat soubory"
 
 #: admin/folderadmin.py:1112
 #, python-format
@@ -137,11 +138,11 @@ msgstr ""
 
 #: admin/folderadmin.py:1130 admin/folderadmin.py:1132
 msgid "Copy files and/or folders"
-msgstr ""
+msgstr "Kopírovat soubory a/nebo složky"
 
 #: admin/folderadmin.py:1149
 msgid "Copy selected files and/or folders"
-msgstr ""
+msgstr "Kopírovat vybrané soubory a/nebo složky"
 
 #: admin/folderadmin.py:1252
 #, python-format
@@ -150,11 +151,11 @@ msgstr ""
 
 #: admin/folderadmin.py:1259 admin/folderadmin.py:1261
 msgid "Resize images"
-msgstr ""
+msgstr "Změnit velikost obrázků"
 
 #: admin/folderadmin.py:1277
 msgid "Resize selected images"
-msgstr ""
+msgstr "Změnit velikost vybraných obrázků"
 
 #: admin/forms.py:27
 msgid "Suffix which will be appended to filenames of copied files."

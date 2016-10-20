@@ -8,6 +8,7 @@ from django.utils.translation import string_concat, ugettext_lazy
 from ..models import Image
 from ..thumbnail_processors import normalize_subject_location
 from .fileadmin import FileAdmin
+from . import views
 
 
 class ImageAdminForm(forms.ModelForm):
@@ -86,6 +87,26 @@ class ImageAdminForm(forms.ModelForm):
 
 class ImageAdmin(FileAdmin):
     form = ImageAdminForm
+
+    def get_urls(self):
+        from django.conf.urls import patterns, url
+        urls = super(ImageAdmin, self).get_urls()
+        url_patterns = patterns('',
+            url(r'^operations/rotate-left/(?P<pk>\d+)/$',
+                self.admin_site.admin_view(views.rotate_left),
+                name='rotate-left'),
+            url(r'^operations/rotate-right/(?P<pk>\d+)/$',
+                self.admin_site.admin_view(views.rotate_right),
+                name='rotate-right'),
+            url(r'^operations/flip-h/(?P<pk>\d+)/$',
+                self.admin_site.admin_view(views.flip_h),
+                name='flip-h'),
+            url(r'^operations/flip-v/(?P<pk>\d+)/$',
+                self.admin_site.admin_view(views.flip_v),
+                name='flip-v'),
+        )
+        url_patterns.extend(urls)
+        return url_patterns
 
 
 ImageAdmin.fieldsets = ImageAdmin.build_fieldsets(

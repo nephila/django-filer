@@ -5,15 +5,15 @@
 # Translators:
 # Translators:
 # Translators:
-# Cihad GÜNDOĞDU <cihadgundogdu@gmail.com>, 2013,2015
+# Cihad GÜNDOĞDU <cihadgundogdu@gmail.com>, 2013,2015-2016
 # Cihad GÜNDOĞDU <cihadgundogdu@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django Filer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-30 20:28-0400\n"
-"PO-Revision-Date: 2016-08-31 00:28+0000\n"
-"Last-Translator: Paulo Alvarado <paulo.alvarado@divio.ch>\n"
+"PO-Revision-Date: 2016-09-08 07:41+0000\n"
+"Last-Translator: Cihad GÜNDOĞDU <cihadgundogdu@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/divio/django-filer/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Gelişmiş"
 
 #: admin/fileadmin.py:163
 msgid "canonical URL"
-msgstr ""
+msgstr "standart URL"
 
 #: admin/folderadmin.py:387 admin/folderadmin.py:554
 msgid ""
@@ -204,7 +204,7 @@ msgstr ""
 
 #: admin/forms.py:74
 msgid "Resize parameters must be choosen."
-msgstr ""
+msgstr "Boyutlandırma parametreleri seçilmeli"
 
 #: admin/imageadmin.py:16
 msgid "Subject location"
@@ -729,7 +729,7 @@ msgstr ""
 
 #: templates/admin/filer/folder/directory_listing.html:173
 msgid "Limit the search to current folder"
-msgstr ""
+msgstr "Geçerli klasörün aramalarını sınırla"
 
 #: templates/admin/filer/folder/directory_listing.html:189
 #: templates/admin/filer/tools/detail_info.html:215
@@ -738,11 +738,11 @@ msgstr "Sil"
 
 #: templates/admin/filer/folder/directory_listing.html:212
 msgid "Adds a new Folder"
-msgstr ""
+msgstr "Yeni Klasör Ekle"
 
 #: templates/admin/filer/folder/directory_listing.html:215
 msgid "New Folder"
-msgstr ""
+msgstr "Yeni Klasör"
 
 #: templates/admin/filer/folder/directory_listing.html:220
 #: templates/admin/filer/folder/directory_listing.html:224
@@ -750,31 +750,31 @@ msgstr ""
 #: templates/admin/filer/folder/directory_listing.html:231
 #: templates/admin/filer/folder/directory_listing.html:238
 msgid "Upload Files"
-msgstr ""
+msgstr "Dosyaları Yükle"
 
 #: templates/admin/filer/folder/directory_listing.html:236
 msgid "You have to select a folder first"
-msgstr ""
+msgstr "Önce bir klasör seçmelisin"
 
 #: templates/admin/filer/folder/directory_table.html:13
 msgid "Name"
-msgstr ""
+msgstr "İsim"
 
 #: templates/admin/filer/folder/directory_table.html:14
 #: templates/admin/filer/tools/detail_info.html:61
 #: templates/admin/filer/tools/detail_info.html:152
 msgid "Owner"
-msgstr ""
+msgstr "Sahip"
 
 #: templates/admin/filer/folder/directory_table.html:15
 #: templates/admin/filer/tools/detail_info.html:40
 #: templates/admin/filer/tools/detail_info.html:104
 msgid "Size"
-msgstr ""
+msgstr "Boyut"
 
 #: templates/admin/filer/folder/directory_table.html:16
 msgid "Action"
-msgstr ""
+msgstr "İşlem"
 
 #: templates/admin/filer/folder/directory_table.html:25
 #: templates/admin/filer/folder/directory_table.html:32
@@ -782,7 +782,7 @@ msgstr ""
 #: templates/admin/filer/folder/directory_table.html:62
 #, python-format
 msgid "Change '%(item_label)s' folder details"
-msgstr ""
+msgstr "'%(item_label)s' klasör detaylarını değiştir"
 
 #: templates/admin/filer/folder/directory_table.html:73
 #: templates/admin/filer/tools/search_form.html:5
@@ -802,48 +802,48 @@ msgstr[1] ""
 
 #: templates/admin/filer/folder/directory_table.html:80
 msgid "Change folder details"
-msgstr ""
+msgstr "Klasör detaylarını değiştir"
 
 #: templates/admin/filer/folder/directory_table.html:81
 msgid "Remove folder"
-msgstr ""
+msgstr "Klasörü kaldır"
 
 #: templates/admin/filer/folder/directory_table.html:92
 #: templates/admin/filer/folder/directory_table.html:100
 #: templates/admin/filer/folder/directory_table.html:115
 msgid "Select this file"
-msgstr ""
+msgstr "Bu dosyayı seç"
 
 #: templates/admin/filer/folder/directory_table.html:103
 #: templates/admin/filer/folder/directory_table.html:118
 #: templates/admin/filer/folder/directory_table.html:138
 #, python-format
 msgid "Change '%(item_label)s' details"
-msgstr ""
+msgstr "'%(item_label)s' detaylarını değiştir"
 
 #: templates/admin/filer/folder/directory_table.html:127
 msgid "Permissions"
-msgstr ""
+msgstr "Yetkiler"
 
 #: templates/admin/filer/folder/directory_table.html:127
 msgid "disabled"
-msgstr ""
+msgstr "pasif"
 
 #: templates/admin/filer/folder/directory_table.html:127
 msgid "enabled"
-msgstr ""
+msgstr "aktif"
 
 #: templates/admin/filer/folder/directory_table.html:139
 msgid "Remove file"
-msgstr ""
+msgstr "Dosyayı kaldır"
 
 #: templates/admin/filer/folder/directory_table.html:146
 msgid "Drop files here or use the \"Upload Files\" button"
-msgstr ""
+msgstr "Buraya dosya yüklemek için \"Dosyaları Yükle\" düğmesine tıklayın"
 
 #: templates/admin/filer/folder/directory_table.html:156
 msgid "Drop your file to upload into:"
-msgstr ""
+msgstr "Yüklenecek dosyayı buraya bırakın"
 
 #: templates/admin/filer/folder/directory_table.html:166
 msgid "Upload"
@@ -851,15 +851,15 @@ msgstr "Yükle"
 
 #: templates/admin/filer/folder/directory_table.html:178
 msgid "cancel"
-msgstr ""
+msgstr "iptal"
 
 #: templates/admin/filer/folder/directory_table.html:182
 msgid "Upload success!"
-msgstr ""
+msgstr "Yükleme Başarılı"
 
 #: templates/admin/filer/folder/directory_table.html:186
 msgid "Upload canceled!"
-msgstr ""
+msgstr "Yükleme iptal!"
 
 #: templates/admin/filer/folder/directory_table.html:193
 msgid "previous"
@@ -868,7 +868,7 @@ msgstr "önceki"
 #: templates/admin/filer/folder/directory_table.html:198
 #, python-format
 msgid "Page %(number)s of %(num_pages)s."
-msgstr ""
+msgstr "Sayfa %(number)s  / %(num_pages)s."
 
 #: templates/admin/filer/folder/directory_table.html:203
 msgid "next"
@@ -877,7 +877,7 @@ msgstr "sonraki"
 #: templates/admin/filer/folder/directory_table.html:213
 #, python-format
 msgid "Select all %(total_count)s"
-msgstr ""
+msgstr "%(total_count)s Tümünü seç"
 
 #: templates/admin/filer/folder/new_folder_form.html:5
 msgid "Add new"
@@ -907,7 +907,7 @@ msgstr "Arabellekteki tüm dosyaları kopyala"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:27
 msgid "Empty Clipboard"
-msgstr ""
+msgstr "Bellek boş"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:50
 msgid "the clipboard is empty"
@@ -919,7 +919,7 @@ msgstr "Yükleme başarısız"
 
 #: templates/admin/filer/tools/detail_info.html:24
 msgid "Open file"
-msgstr ""
+msgstr "Dosya aç"
 
 #: templates/admin/filer/tools/detail_info.html:26
 #: templates/admin/filer/tools/detail_info.html:88
@@ -929,46 +929,46 @@ msgstr "Tam boyutlu görünüm"
 #: templates/admin/filer/tools/detail_info.html:36
 #: templates/admin/filer/tools/detail_info.html:95
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: templates/admin/filer/tools/detail_info.html:44
 #: templates/admin/filer/tools/detail_info.html:113
 msgid "File-size"
-msgstr ""
+msgstr "Dosya-Boyut"
 
 #: templates/admin/filer/tools/detail_info.html:48
 #: templates/admin/filer/tools/detail_info.html:122
 msgid "Modified"
-msgstr ""
+msgstr "Düzenlendi"
 
 #: templates/admin/filer/tools/detail_info.html:52
 #: templates/admin/filer/tools/detail_info.html:131
 msgid "Created"
-msgstr ""
+msgstr "Oluşturuldu"
 
 #: templates/admin/filer/tools/detail_info.html:160
 msgid "Add Description"
-msgstr ""
+msgstr "Tanım ekle"
 
 #: templates/admin/filer/tools/detail_info.html:178
 msgid "Author"
-msgstr ""
+msgstr "Yazar"
 
 #: templates/admin/filer/tools/detail_info.html:185
 msgid "Add Alt-Text"
-msgstr ""
+msgstr "Alternatif metin ekle"
 
 #: templates/admin/filer/tools/detail_info.html:192
 msgid "Add caption"
-msgstr ""
+msgstr "Başlık ekle"
 
 #: templates/admin/filer/tools/detail_info.html:199
 msgid "Add Tags"
-msgstr ""
+msgstr "Etiketleri Ekle"
 
 #: templates/admin/filer/tools/detail_info.html:206
 msgid "Change File"
-msgstr ""
+msgstr "Dosya Değiştir"
 
 #: templates/admin/filer/tools/search_form.html:5
 msgid "found"
@@ -1008,7 +1008,7 @@ msgstr ""
 
 #: templates/admin/filer/widgets/admin_file.html:36
 msgid "Choose File"
-msgstr ""
+msgstr "Dosya Seç"
 
 #: templates/admin/filer/widgets/admin_folder.html:11
 #: templates/admin/filer/widgets/admin_folder.html:33
@@ -1017,7 +1017,7 @@ msgstr ""
 
 #: templates/admin/filer/widgets/admin_folder.html:15
 msgid "Add Folder"
-msgstr ""
+msgstr "Klasör Ekle"
 
 #~ msgid ""
 #~ "\n"

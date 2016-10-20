@@ -5,13 +5,14 @@
 # Translators:
 # Translators:
 # Translators:
+# Niklas Jerva <niklas.jerva@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django Filer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-30 20:28-0400\n"
-"PO-Revision-Date: 2016-08-31 00:29+0000\n"
-"Last-Translator: Paulo Alvarado <paulo.alvarado@divio.ch>\n"
+"PO-Revision-Date: 2016-09-01 21:41+0000\n"
+"Last-Translator: Niklas Jerva <niklas.jerva@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/divio/django-filer/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr "Edistyneet asetukset"
 
 #: admin/fileadmin.py:163
 msgid "canonical URL"
-msgstr ""
+msgstr "sääntöjenmukainen URL"
 
 #: admin/folderadmin.py:387 admin/folderadmin.py:554
 msgid ""
@@ -100,7 +101,7 @@ msgstr "Poista valitut tiedostot ja/tai kansiot"
 #: admin/folderadmin.py:906
 #, python-format
 msgid "Folders with names %s already exist at the selected destination"
-msgstr ""
+msgstr "%s niminen kansio on jo valitussa kohteessa"
 
 #: admin/folderadmin.py:910
 #, python-format
@@ -210,20 +211,20 @@ msgstr "Kohteen sijainti"
 
 #: admin/imageadmin.py:17
 msgid "Location of the main subject of the scene. Format: \"x,y\"."
-msgstr ""
+msgstr "Kuvan pääkohteen sijainti. Muoto: \"x,y\"."
 
 #: admin/imageadmin.py:54
 msgid "Invalid subject location format. "
-msgstr ""
+msgstr "Virheellinen kohteen sijainnin muoto."
 
 #: admin/imageadmin.py:60
 msgid "Subject location is outside of the image. "
-msgstr ""
+msgstr "Kohteen sijainti kuvan ulkopuolella."
 
 #: admin/imageadmin.py:69
 #, python-brace-format
 msgid "Your input: \"{subject_location}\". "
-msgstr ""
+msgstr "Syöttösi: \"{subject_location}\"."
 
 #: admin/views.py:57
 msgid "Folder with this name already exists."
@@ -237,7 +238,7 @@ msgstr "Filer"
 
 #: contrib/django_cms/cms_toolbars.py:47
 msgid "Media library"
-msgstr ""
+msgstr "Mediakirjasto"
 
 #: models/abstract.py:40
 msgid "default alt text"
@@ -340,7 +341,7 @@ msgstr "Käyttöoikeudet pois käytöstä"
 msgid ""
 "Disable any permission checking for this file. File will be publicly "
 "accessible to anyone."
-msgstr ""
+msgstr "Poista käyttöoikeuksien tarkistus tältä tiedostolta. Tiedosto näkyy julkisena kaikille."
 
 #: models/foldermodels.py:112
 msgid "created at"
@@ -370,11 +371,11 @@ msgstr "tämä kohde ja kaikki lapset"
 
 #: models/foldermodels.py:261
 msgid "allow"
-msgstr ""
+msgstr "salli"
 
 #: models/foldermodels.py:262
 msgid "deny"
-msgstr ""
+msgstr "kiellä"
 
 #: models/foldermodels.py:267
 msgid "type"
@@ -426,22 +427,22 @@ msgstr "tekijänoikeustiedot on aina julkaistava"
 
 #: models/thumbnailoptionmodels.py:15
 msgid "width in pixel."
-msgstr ""
+msgstr "leveys pikseleinä."
 
 #: models/thumbnailoptionmodels.py:16
 msgid "height in pixel."
-msgstr ""
+msgstr "korkeus pikseleinä."
 
 #: models/thumbnailoptionmodels.py:24
 msgid "thumbnail options"
-msgstr ""
+msgstr "pikkukuvan asetukset"
 
 #: models/virtualitems.py:50
 #: templates/admin/filer/folder/directory_table.html:4
 #: templates/admin/filer/folder/directory_table.html:152
 #: templates/admin/filer/tools/clipboard/clipboard.html:27
 msgid "Unsorted Uploads"
-msgstr ""
+msgstr "Järjestelemättömät lataukset"
 
 #: models/virtualitems.py:65
 msgid "files with missing metadata"
@@ -509,7 +510,7 @@ msgstr "Palaa kansioon '%(folder_name)s'"
 
 #: templates/admin/filer/change_form.html:25
 msgid "Duplicates"
-msgstr ""
+msgstr "Kaksoiskappaleet"
 
 #: templates/admin/filer/delete_selected_files_confirmation.html:11
 msgid ""
@@ -534,11 +535,11 @@ msgstr "Oletko varma, että haluat poistaa valitut tiedostot ja/tai kansiot? Kai
 #: templates/admin/filer/folder/choose_copy_destination.html:77
 #: templates/admin/filer/folder/choose_move_destination.html:73
 msgid "No, take me back"
-msgstr ""
+msgstr "Ei, vie minut takaisin"
 
 #: templates/admin/filer/delete_selected_files_confirmation.html:47
 msgid "Yes, I&#39;m sure"
-msgstr ""
+msgstr "Kyllä, olen varma"
 
 #: templates/admin/filer/file/change_form.html:36
 #: templates/admin/filer/folder/change_form.html:21
@@ -585,7 +586,7 @@ msgstr "Käyttöoikeutesi eivät riitä kaikkien valittujen tiedostojen ja/tai k
 #: templates/admin/filer/folder/choose_move_destination.html:44
 #: templates/admin/filer/folder/choose_move_destination.html:50
 msgid "Take me back"
-msgstr ""
+msgstr "Vie minut takaisin"
 
 #: templates/admin/filer/folder/choose_copy_destination.html:42
 #: templates/admin/filer/folder/choose_move_destination.html:42
@@ -615,7 +616,7 @@ msgstr "Kopioi"
 
 #: templates/admin/filer/folder/choose_copy_destination.html:80
 msgid "It is not allowed to copy files into same folder"
-msgstr ""
+msgstr "Tiedostojen kopiointi samaan kansioon ei ole sallittu"
 
 #: templates/admin/filer/folder/choose_images_resize_options.html:15
 msgid ""
@@ -672,7 +673,7 @@ msgstr "Siirrä"
 
 #: templates/admin/filer/folder/choose_move_destination.html:76
 msgid "It is not allowed to move files into same folder"
-msgstr ""
+msgstr "Tiedostojen siirto samaan kansioon ei ole sallittua"
 
 #: templates/admin/filer/folder/choose_rename_format.html:15
 msgid ""
@@ -707,7 +708,7 @@ msgstr "Muuta"
 
 #: templates/admin/filer/folder/directory_listing.html:155
 msgid "Click here to run search for entered phrase"
-msgstr ""
+msgstr "Valitse suorittaaksesi haun annetulla hakusanalla"
 
 #: templates/admin/filer/folder/directory_listing.html:158
 msgid "Search"
@@ -715,19 +716,19 @@ msgstr "Hae"
 
 #: templates/admin/filer/folder/directory_listing.html:165
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: templates/admin/filer/folder/directory_listing.html:167
 msgid "Limit"
-msgstr ""
+msgstr "Raja"
 
 #: templates/admin/filer/folder/directory_listing.html:172
 msgid "Check it to limit the search to current folder"
-msgstr ""
+msgstr "Valitse rajoittaaksesi haun nykyiseen kansioon"
 
 #: templates/admin/filer/folder/directory_listing.html:173
 msgid "Limit the search to current folder"
-msgstr ""
+msgstr "Rajoita haku nykyiseen kansioon"
 
 #: templates/admin/filer/folder/directory_listing.html:189
 #: templates/admin/filer/tools/detail_info.html:215
@@ -748,11 +749,11 @@ msgstr "Uusi kansio"
 #: templates/admin/filer/folder/directory_listing.html:231
 #: templates/admin/filer/folder/directory_listing.html:238
 msgid "Upload Files"
-msgstr ""
+msgstr "Lataa tiedostoja"
 
 #: templates/admin/filer/folder/directory_listing.html:236
 msgid "You have to select a folder first"
-msgstr ""
+msgstr "Sinun tulee valita kansio ensin"
 
 #: templates/admin/filer/folder/directory_table.html:13
 msgid "Name"
@@ -768,11 +769,11 @@ msgstr "Omistaja"
 #: templates/admin/filer/tools/detail_info.html:40
 #: templates/admin/filer/tools/detail_info.html:104
 msgid "Size"
-msgstr ""
+msgstr "Koko"
 
 #: templates/admin/filer/folder/directory_table.html:16
 msgid "Action"
-msgstr ""
+msgstr "Toiminto"
 
 #: templates/admin/filer/folder/directory_table.html:25
 #: templates/admin/filer/folder/directory_table.html:32
@@ -787,24 +788,24 @@ msgstr "Muuta kansion '%(item_label)s' tietoja"
 #, python-format
 msgid "%(counter)s folder"
 msgid_plural "%(counter)s folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s kansio"
+msgstr[1] "%(counter)s kansiota"
 
 #: templates/admin/filer/folder/directory_table.html:74
 #: templates/admin/filer/tools/search_form.html:6
 #, python-format
 msgid "%(counter)s file"
 msgid_plural "%(counter)s files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s tiedosto"
+msgstr[1] "%(counter)s tiedostoa"
 
 #: templates/admin/filer/folder/directory_table.html:80
 msgid "Change folder details"
-msgstr ""
+msgstr "Muuta kansion tietoja"
 
 #: templates/admin/filer/folder/directory_table.html:81
 msgid "Remove folder"
-msgstr ""
+msgstr "Poista kansio"
 
 #: templates/admin/filer/folder/directory_table.html:92
 #: templates/admin/filer/folder/directory_table.html:100
@@ -833,15 +834,15 @@ msgstr "käytössä"
 
 #: templates/admin/filer/folder/directory_table.html:139
 msgid "Remove file"
-msgstr ""
+msgstr "Poista tiedosto"
 
 #: templates/admin/filer/folder/directory_table.html:146
 msgid "Drop files here or use the \"Upload Files\" button"
-msgstr ""
+msgstr "Pudota tiedostoja tähän tai käytä \"Lataa tiedostoja\" painiketta"
 
 #: templates/admin/filer/folder/directory_table.html:156
 msgid "Drop your file to upload into:"
-msgstr ""
+msgstr "Pudota tiedostosi:"
 
 #: templates/admin/filer/folder/directory_table.html:166
 msgid "Upload"
@@ -849,15 +850,15 @@ msgstr "Siirrä palvelimelle"
 
 #: templates/admin/filer/folder/directory_table.html:178
 msgid "cancel"
-msgstr ""
+msgstr "peruuta"
 
 #: templates/admin/filer/folder/directory_table.html:182
 msgid "Upload success!"
-msgstr ""
+msgstr "Lataus onnistui!"
 
 #: templates/admin/filer/folder/directory_table.html:186
 msgid "Upload canceled!"
-msgstr ""
+msgstr "Lataus peruttu!"
 
 #: templates/admin/filer/folder/directory_table.html:193
 msgid "previous"
@@ -866,7 +867,7 @@ msgstr "edellinen"
 #: templates/admin/filer/folder/directory_table.html:198
 #, python-format
 msgid "Page %(number)s of %(num_pages)s."
-msgstr ""
+msgstr "Sovu %(number)s/%(num_pages)s"
 
 #: templates/admin/filer/folder/directory_table.html:203
 msgid "next"
@@ -875,7 +876,7 @@ msgstr "seuraava"
 #: templates/admin/filer/folder/directory_table.html:213
 #, python-format
 msgid "Select all %(total_count)s"
-msgstr ""
+msgstr "Valitse kaikki %(total_count)s"
 
 #: templates/admin/filer/folder/new_folder_form.html:5
 msgid "Add new"
@@ -905,7 +906,7 @@ msgstr "Siirrä kaikki leikepöydällä olevat tiedostot"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:27
 msgid "Empty Clipboard"
-msgstr ""
+msgstr "Tyhjä leikepöytä"
 
 #: templates/admin/filer/tools/clipboard/clipboard.html:50
 msgid "the clipboard is empty"
@@ -917,7 +918,7 @@ msgstr "siirto epäonnistui"
 
 #: templates/admin/filer/tools/detail_info.html:24
 msgid "Open file"
-msgstr ""
+msgstr "Avaa tiedosto"
 
 #: templates/admin/filer/tools/detail_info.html:26
 #: templates/admin/filer/tools/detail_info.html:88
@@ -927,46 +928,46 @@ msgstr "Täysikokoinen esikatselu"
 #: templates/admin/filer/tools/detail_info.html:36
 #: templates/admin/filer/tools/detail_info.html:95
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 #: templates/admin/filer/tools/detail_info.html:44
 #: templates/admin/filer/tools/detail_info.html:113
 msgid "File-size"
-msgstr ""
+msgstr "Tiedostokoko"
 
 #: templates/admin/filer/tools/detail_info.html:48
 #: templates/admin/filer/tools/detail_info.html:122
 msgid "Modified"
-msgstr ""
+msgstr "Muokattu"
 
 #: templates/admin/filer/tools/detail_info.html:52
 #: templates/admin/filer/tools/detail_info.html:131
 msgid "Created"
-msgstr ""
+msgstr "Luotu"
 
 #: templates/admin/filer/tools/detail_info.html:160
 msgid "Add Description"
-msgstr ""
+msgstr "Lisää kuvaus"
 
 #: templates/admin/filer/tools/detail_info.html:178
 msgid "Author"
-msgstr ""
+msgstr "Tekijä"
 
 #: templates/admin/filer/tools/detail_info.html:185
 msgid "Add Alt-Text"
-msgstr ""
+msgstr "Lisää alt-teksti"
 
 #: templates/admin/filer/tools/detail_info.html:192
 msgid "Add caption"
-msgstr ""
+msgstr "Lisää kuvateksti"
 
 #: templates/admin/filer/tools/detail_info.html:199
 msgid "Add Tags"
-msgstr ""
+msgstr "Lisää tagi"
 
 #: templates/admin/filer/tools/detail_info.html:206
 msgid "Change File"
-msgstr ""
+msgstr "Muuta tiedosto"
 
 #: templates/admin/filer/tools/search_form.html:5
 msgid "found"
@@ -988,7 +989,7 @@ msgstr "Tyhjennä"
 
 #: templates/admin/filer/widgets/admin_file.html:17
 msgid "or drop your file here"
-msgstr ""
+msgstr "tai pudota tiedostosi tähän"
 
 #: templates/admin/filer/widgets/admin_file.html:26
 #: templates/admin/filer/widgets/admin_file.html:27
@@ -1006,7 +1007,7 @@ msgstr "Haku"
 
 #: templates/admin/filer/widgets/admin_file.html:36
 msgid "Choose File"
-msgstr ""
+msgstr "Valitse tiedosto"
 
 #: templates/admin/filer/widgets/admin_folder.html:11
 #: templates/admin/filer/widgets/admin_folder.html:33
@@ -1015,7 +1016,7 @@ msgstr "ei valintaa"
 
 #: templates/admin/filer/widgets/admin_folder.html:15
 msgid "Add Folder"
-msgstr ""
+msgstr "Lisää kansio"
 
 #~ msgid ""
 #~ "\n"
