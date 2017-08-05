@@ -1,4 +1,29 @@
 {% load i18n staticfiles %}
+<script type="text/javascript">
+(function () {
+    django.jQuery(document).ready(function () {
+        django.jQuery(document).on('click', '#image-rotate-left', function () {
+            call_image_operation("{% url 'admin:rotate-left' original.pk %}");
+        });
+        django.jQuery(document).on('click', '#image-rotate-right', function () {
+            call_image_operation("{% url 'admin:rotate-right' original.pk %}");
+        });
+        django.jQuery(document).on('click', '#image-flip-h', function () {
+            call_image_operation("{% url 'admin:flip-h' original.pk %}");
+        });
+        django.jQuery(document).on('click', '#image-flip-v', function () {
+            call_image_operation("{% url 'admin:flip-v' original.pk %}");
+        });
+    });
+
+    function call_image_operation(url) {
+        django.jQuery.post(url)
+            .done(function (data) {
+                django.jQuery('.js-focal-point-image').attr('src', data + '?' + Date.now());
+            });
+    }
+})();
+</script>
 {% if detail %}
     <section class="image-info image-info-detail">
         <div class="image-info-title">
@@ -25,6 +50,14 @@
                         {% endif %}
                     </a>
                 </div>
+                {% if not file %}
+                <div class="text-left image-preview-container">
+                    <a id="image-rotate-left" href="#" class="button">{% trans "Rotate Left" %}</a>
+                    <a id="image-rotate-right" href="#" class="button">{% trans "Rotate Right" %}</a>
+                    <a id="image-flip-h" href="#" class="button">{% trans "Flip Horizontally" %}</a>
+                    <a id="image-flip-v" href="#" class="button">{% trans "Flip Vertically" %}</a>
+                </div>
+                {% endif %}
             </div>
         </div>
         <div class="image-details-right">

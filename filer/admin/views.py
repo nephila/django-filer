@@ -5,10 +5,14 @@ from django import forms
 from django.contrib.admin import widgets
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.http.response import HttpResponseBadRequest
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.csrf import csrf_exempt
+
+from PIL import ImageOps, Image as PILImage
+from filer.models import File
 
 from .. import settings as filer_settings
 from ..models import Clipboard, Folder, FolderRoot, tools
@@ -127,3 +131,77 @@ def delete_clipboard(request):
             admin_url_params_encoded(request, first_separator='&'),
         )
     )
+
+
+def _get_images(pk):
+    filer_image = File.objects.get(pk=pk)
+    im = PILImage.open(filer_image.path)
+    return (filer_image, im)
+
+
+def image_rotate_right(pk, degree):
+    (filer_image, im) = _get_images(pk)
+    im = im.rotate(-degree)
+    im.save(filer_image.path)
+    im_filer = File.objects.get(pk=pk)
+    im_filer.file.delete_thumbnails()
+    return im_filer
+
+
+def image_rotate_left(pk, degree):
+    (filer_image, im) = _get_images(pk)
+    im = im.rotate(degree)
+    im.save(filer_image.path)
+    im_filer = File.objects.get(pk=pk)
+    im_filer.file.delete_thumbnails()
+    return im_filer
+
+
+def image_flip_v(pk):
+    (filer_image, im) = _get_images(pk)
+    im = ImageOps.flip(im)
+    im.save(filer_image.path)
+    im_filer = File.objects.get(pk=pk)
+    im_filer.file.delete_thumbnails()
+    return im_filer
+
+
+def image_flip_h(pk):
+    (filer_image, im) = _get_images(pk)
+    im = ImageOps.mirror(im)
+    im.save(filer_image.path)
+    im_filer = File.objects.get(pk=pk)
+    im_filer.file.delete_thumbnails()
+    return im_filer
+
+
+@csrf_exempt
+@login_required
+def rotate_left(request, pk):
+    if request.method == 'POST':
+        img = image_rotate_left(pk, 90)
+        return HttpResponse(img.thumbnails['admin_sidebar_preview'], content_type="text/plain")
+
+
+@csrf_exempt
+@login_required
+def rotate_right(request, pk):
+    if request.method == 'POST':
+        img = image_rotate_right(pk, 90)
+        return HttpResponse(img.thumbnails['admin_sidebar_preview'], content_type="text/plain")
+
+
+@csrf_exempt
+@login_required
+def flip_v(request, pk):
+    if request.method == 'POST':
+        img = image_flip_v(pk)
+        return HttpResponse(img.thumbnails['admin_sidebar_preview'], content_type="text/plain")
+
+
+@csrf_exempt
+@login_required
+def flip_h(request, pk):
+    if request.method == 'POST':
+        img = image_flip_h(pk)
+        return HttpResponse(img.thumbnails['admin_sidebar_preview'], content_type="text/plain")
