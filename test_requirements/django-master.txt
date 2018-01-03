@@ -1,5 +1,6 @@
 git+git://github.com/django/django.git@master#egg=Django
 django-mptt>=0.7,<0.9
+https://github.com/django-polymorphic/django-polymorphic/archive/master.zip
 https://github.com/nephila/djangocms-helper/archive/develop.zip
 coverage
 

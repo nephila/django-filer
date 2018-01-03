@@ -12,7 +12,6 @@ from .. import settings as filer_settings
 from ..models.clipboardmodels import Clipboard
 from ..models.filemodels import File
 from ..models.foldermodels import Folder
-from ..models.imagemodels import Image as DefaultImage
 from ..models.mixins import IconsMixin
 from ..settings import FILER_IMAGE_MODEL
 from ..test_utils import ET_2
@@ -31,7 +30,6 @@ try:
 except ImportError:
     # Django<1.9
     from django.utils.unittest import skipIf, skipUnless
-
 
 
 class FilerApiTests(TestCase):
@@ -252,7 +250,9 @@ class FilerApiTests(TestCase):
         """
         Check that the correct model is loaded and save / reload data
         """
+        from filer.models import Image as DefaultImage
         image = self.create_filer_image()
+
         if DefaultImage._meta.swapped:
             self.assertTrue(hasattr(image, 'extra_description'))
             self.assertFalse(hasattr(image, 'author'))

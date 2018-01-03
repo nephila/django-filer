@@ -1,6 +1,6 @@
 django>=1.10,<1.11
 django-mptt>=0.8,<0.9
-djangocms-helper>=0.9.2,<0.10
+djangocms-helper>=1.0,<1.2
 coverage
 
 -r base.txt
