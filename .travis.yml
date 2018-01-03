@@ -11,10 +11,10 @@ python:
 install:
   - pip install tox-travis coveralls
 
-branches:
-  only:
-    - master
-    - develop
+#branches:
+#  only:
+#    - master
+#    - develop
 
 before_script:
   - if [ "$FRONTEND" == "yes" ]; then nvm install 0.12.7 && nvm use 0.12.7; fi
