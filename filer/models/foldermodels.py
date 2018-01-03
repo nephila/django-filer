@@ -266,15 +266,17 @@ class FolderPermission(models.Model):
         (DENY, _('deny')),
     )
 
-    folder = models.ForeignKey(Folder, verbose_name=('folder'), null=True, blank=True, on_delete=models.CASCADE)
+    folder = models.ForeignKey(
+        Folder, verbose_name=('folder'), null=True, blank=True, on_delete=models.CASCADE
+    )
 
     type = models.SmallIntegerField(_('type'), choices=TYPES, default=ALL)
     user = models.ForeignKey(getattr(settings, 'AUTH_USER_MODEL', 'auth.User'),
                              related_name="filer_folder_permissions", on_delete=models.SET_NULL,
                              verbose_name=_("user"), blank=True, null=True)
     group = models.ForeignKey(auth_models.Group,
-                              related_name="filer_folder_permissions",
-                              verbose_name=_("group"), blank=True, null=True, on_delete=models.SET_NULL)
+                              related_name="filer_folder_permissions", on_delete=models.SET_NULL,
+                              verbose_name=_("group"), blank=True, null=True)
     everybody = models.BooleanField(_("everybody"), default=False)
 
     can_edit = models.SmallIntegerField(_("can edit"), choices=PERMISIONS, blank=True, null=True, default=None)
