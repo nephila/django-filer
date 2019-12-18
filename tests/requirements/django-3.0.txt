@@ -1,0 +1,7 @@
+-r base.txt
+
+django~=3.0
+django-mptt>=0.9.1
+django_polymorphic>=2.0,<2.2
+# temporary branch until final version is released
+https://github.com/nephila/django-app-helper/archive/feature/django-3.zip

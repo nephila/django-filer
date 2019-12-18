@@ -22,7 +22,7 @@ HELPER_SETTINGS = {
     'LANGUAGE_CODE': 'en',
     'LANGUAGES': (
         ('en', 'English'),
-        ('fr_FR', 'French'),
+        ('fr-FR', 'French'),
         ('it', 'Italiano'),
     ),
     'CMS_LANGUAGES': {
